@@ -1,0 +1,123 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+main {
+    background: rgb(27, 27, 27);
+    background: linear-gradient(90deg, rgba(27, 27, 27, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("./material/bg.png");
+    height: 100vh;
+    background-size: cover;
+}
+
+.app {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.player-container,
+.time-select,
+.sound-pick {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.player-container {
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+}
+
+.player-container svg {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    pointer-events: none;
+}
+
+.time-select {
+    width: 100%;
+    height: 25vh;
+}
+
+.sound-pick {
+    width: 100%;
+    height: 25vh;
+}
+
+.time-display {
+    margin: 0px;
+    position: absolute;
+    bottom: 0%;
+    font-size: 3rem;
+}
+
+.time-select>button {
+    font-weight: 500;
+    font-family: 'Spartan', sans-serif;
+    width: 10%;
+    height: 30%;
+    border-radius: 10rem;
+    cursor: pointer;
+    opacity: 0.9;
+    border: none;
+}
+
+.time-select>button:hover {
+    transition: 300ms;
+    border: 2px solid #F2E3D5;
+    box-shadow: 0px 0px 20px 0px rgba(52, 64, 64, 0.75);
+    opacity: 1;
+}
+
+.time-select>button:focus {
+    outline: none;
+}
+
+.sound-pick button {
+    border: none;
+    background: none;
+}
+
+.sound-pick button img {
+    width: 5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.sound-pick button img:hover {
+    opacity: 1;
+    transition: 300ms;
+}
+
+.rainSound img {
+    background-color: #9CA5D9;
+}
+
+.beachSound img {
+    background-color: #D9A036;
+}
+
+.beachSound:focus {
+    outline: none;
+}
+
+.rainSound:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        background: url("./material/mobilebg.png");
+        background-size: cover;
+    }
+}
